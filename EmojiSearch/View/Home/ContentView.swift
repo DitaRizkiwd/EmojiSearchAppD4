@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText: String = ""
+    @State private var isRedacted :Bool = true
+    
+    
     var emojiSearchResource : [EmojiData]{
         //guard if yang dipakai hanya satu kondisi
         guard !searchText.isEmpty else{
@@ -23,10 +26,32 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             List(emojiSearchResource){
-                emoji in EmojiRow(emoji: emoji)
+                emoji in 
+                //navigation link hanya dapat digunakan saat ada navigation stack
+                NavigationLink{
+                    EmojiDetail(emoji: emoji)
+                }label:{
+                    
+                    if isRedacted {
+                        EmojiRow(emoji: emoji)
+                            .redacted(reason: .placeholder)
+                    } else {
+                        EmojiRow(emoji: emoji)
+                    }
+                }
+                //
 //                    .listRowSeparator(.visible)
             }
             .navigationTitle("Emoji")
+//            .redacted(reason: .placeholder)
+            .onAppear{
+                ///proses apapun yang dilakukan user tidak akan memblock interface
+                DispatchQueue.main
+                    .asyncAfter(deadline: .now()+2){
+                        //why not use toogle karena proses hanya berjalan sekali
+                        isRedacted = false
+                    }
+            }
             .searchable(text: $searchText,
                         placement: .navigationBarDrawer(displayMode: .always),
                         prompt: "What emoji's you're looking for ?")
