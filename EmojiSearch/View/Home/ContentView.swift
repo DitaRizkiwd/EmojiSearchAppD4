@@ -22,7 +22,7 @@ struct ContentView: View {
                 .contains(searchText.lowercased())
         }
     }
-    var emojis : [EmojiData] = EmojiProvider.allEmojis()
+   @State private var emojis : [EmojiData] = EmojiProvider.allEmojis()
     var body: some View {
         NavigationStack{
             List(emojiSearchResource){
@@ -52,6 +52,18 @@ struct ContentView: View {
                         isRedacted = false
                     }
             }
+            .refreshable {
+                //! memastikan datanya ada
+                //?? Default value jika data tidak dipastikan ada, contohnya
+//                Emoji(emoji : "sss", name: "sss")
+                isRedacted = true
+                let newRow = EmojiProvider.allEmojis().randomElement()
+                emojis.insert(newRow!, at: 0)
+                
+                DispatchQueue.main
+                    .asyncAfter(deadline: .now()+2){isRedacted = false}
+            }
+            
             .searchable(text: $searchText,
                         placement: .navigationBarDrawer(displayMode: .always),
                         prompt: "What emoji's you're looking for ?")
