@@ -55,7 +55,7 @@ struct ContentView: View {
             .refreshable {
                 //! memastikan datanya ada
                 //?? Default value jika data tidak dipastikan ada, contohnya
-//                Emoji(emoji : "sss", name: "sss")
+//                Emoji(emoji : "sss", name: "sss", dll yang ada di model)
                 isRedacted = true
                 let newRow = EmojiProvider.allEmojis().randomElement()
                 emojis.insert(newRow!, at: 0)

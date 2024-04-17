@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EmojiDetail: View {
     var emoji :EmojiData
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack{
             ScrollView(showsIndicators:false){
@@ -27,6 +28,19 @@ struct EmojiDetail: View {
             .navigationTitle(emoji.name)
             .navigationBarTitleDisplayMode(.inline)
             .ignoresSafeArea()
+            .navigationBarBackButtonHidden(true)
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading){
+                    Button{
+                        dismiss()
+                    }
+                label:{
+                    Image(systemName: "chevron.left.circle.fill")
+                        .font(.title3)
+                }
+                .tint(.primary)
+                }
+            }
         }
     }
 }
