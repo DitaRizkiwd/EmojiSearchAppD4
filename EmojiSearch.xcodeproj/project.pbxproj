@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52B43CBC2BD0B3DB00374010 /* InfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B43CBB2BD0B3DB00374010 /* InfoBox.swift */; };
 		52EFA9A62BCF68F20048C662 /* EmojiSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFA9A52BCF68F20048C662 /* EmojiSearchApp.swift */; };
 		52EFA9A82BCF68F20048C662 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFA9A72BCF68F20048C662 /* ContentView.swift */; };
 		52EFA9AA2BCF68F30048C662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EFA9A92BCF68F30048C662 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52B43CBB2BD0B3DB00374010 /* InfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBox.swift; sourceTree = "<group>"; };
 		52EFA9A22BCF68F20048C662 /* EmojiSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EFA9A52BCF68F20048C662 /* EmojiSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSearchApp.swift; sourceTree = "<group>"; };
 		52EFA9A72BCF68F20048C662 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				52EFA9BA2BCF72BF0048C662 /* EmojiRow.swift */,
+				52B43CBB2BD0B3DB00374010 /* InfoBox.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				52EFA9C32BCF866D0048C662 /* EmojiDetail.swift in Sources */,
 				52EFA9BE2BCF75DE0048C662 /* RandomColor.swift in Sources */,
 				52EFA9BB2BCF72BF0048C662 /* EmojiRow.swift in Sources */,
+				52B43CBC2BD0B3DB00374010 /* InfoBox.swift in Sources */,
 				52EFA9B82BCF6FA60048C662 /* EmojiData.swift in Sources */,
 				52EFA9A62BCF68F20048C662 /* EmojiSearchApp.swift in Sources */,
 			);

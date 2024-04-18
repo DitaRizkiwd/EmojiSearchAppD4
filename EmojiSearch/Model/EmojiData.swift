@@ -165,6 +165,7 @@ struct EmojiData : Identifiable{
             return Emojis
         }
     }
+
     
 
 
