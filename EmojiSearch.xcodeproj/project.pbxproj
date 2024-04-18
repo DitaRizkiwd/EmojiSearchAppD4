@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52B43CBC2BD0B3DB00374010 /* InfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B43CBB2BD0B3DB00374010 /* InfoBox.swift */; };
+		52B43CBF2BD0B98800374010 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B43CBE2BD0B98800374010 /* MainView.swift */; };
 		52EFA9A62BCF68F20048C662 /* EmojiSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFA9A52BCF68F20048C662 /* EmojiSearchApp.swift */; };
 		52EFA9A82BCF68F20048C662 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFA9A72BCF68F20048C662 /* ContentView.swift */; };
 		52EFA9AA2BCF68F30048C662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EFA9A92BCF68F30048C662 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		52B43CBB2BD0B3DB00374010 /* InfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBox.swift; sourceTree = "<group>"; };
+		52B43CBE2BD0B98800374010 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		52EFA9A22BCF68F20048C662 /* EmojiSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EFA9A52BCF68F20048C662 /* EmojiSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSearchApp.swift; sourceTree = "<group>"; };
 		52EFA9A72BCF68F20048C662 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B43CBD2BD0B97800374010 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				52B43CBE2BD0B98800374010 /* MainView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		52EFA9992BCF68F20048C662 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		52EFA9B42BCF6CD30048C662 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52B43CBD2BD0B97800374010 /* Tab */,
 				52EFA9BF2BCF83D40048C662 /* Home */,
 				52EFA9B92BCF72A10048C662 /* Component */,
 			);
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EFA9C12BCF840B0048C662 /* HeaderViewDetail.swift in Sources */,
+				52B43CBF2BD0B98800374010 /* MainView.swift in Sources */,
 				52EFA9A82BCF68F20048C662 /* ContentView.swift in Sources */,
 				52EFA9C32BCF866D0048C662 /* EmojiDetail.swift in Sources */,
 				52EFA9BE2BCF75DE0048C662 /* RandomColor.swift in Sources */,
